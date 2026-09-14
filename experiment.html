@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIRCULATE | Experiment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">♥</span> CIRCULATE</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="experiment.html">Experiment</a>
+    <a href="science.html">Science</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-heading">
+    <p class="eyebrow">EXPERIMENT 01</p>
+    <h1>Vessel Diameter & Pressure</h1>
+    <p>Interact with the model. Narrow the vessel and observe how the simulated pressure indicator changes.</p>
+  </section>
+
+  <section class="experiment-layout">
+    <div class="model-panel">
+      <div class="panel-head">
+        <div><span class="status-dot"></span> LIVE SIMULATION</div>
+        <span id="conditionBadge" class="badge">NORMAL</span>
+      </div>
+
+      <div class="simulation">
+        <div class="heart-model">
+          <div class="heart-shape large">♥</div>
+          <small>HEART / PUMP</small>
+        </div>
+        <div class="vessel-stage">
+          <div class="vessel-label">SIMULATED BLOOD VESSEL</div>
+          <div id="vessel" class="vessel">
+            <div class="blood-cell c1">●</div><div class="blood-cell c2">●</div><div class="blood-cell c3">●</div>
+          </div>
+          <div class="direction">FLOW →</div>
+        </div>
+        <div class="body-target">BODY</div>
+      </div>
+
+      <div class="pressure-box">
+        <div>
+          <span class="metric-label">SIMULATED PRESSURE</span>
+          <strong id="pressure">120</strong><span class="unit"> mmHg</span>
+        </div>
+        <div class="meter"><div id="meterFill"></div></div>
+        <span id="pressureText">Normal range for this classroom simulation</span>
+      </div>
+    </div>
+
+    <aside class="controls panel">
+      <h2>Control the model</h2>
+      <label for="diameter">Vessel diameter</label>
+      <input id="diameter" type="range" min="25" max="100" value="70">
+      <div class="range-values"><span>Narrow</span><strong id="diameterValue">70%</strong><span>Wide</span></div>
+
+      <label for="condition">Visitor-selected condition</label>
+      <select id="condition">
+        <option value="normal">Normal</option>
+        <option value="high">High pressure</option>
+        <option value="low">Low pressure</option>
+      </select>
+
+      <div class="info-box">
+        <strong id="resultTitle">Normal vessel</strong>
+        <p id="resultText">The vessel is at a moderate diameter. The model shows a moderate simulated pressure.</p>
+      </div>
+
+      <button class="button primary full" id="reset">Reset experiment</button>
+      <p class="small-note">This is an educational simulation, not a medical measuring device.</p>
+    </aside>
+  </section>
+
+  <section class="callout">
+    <div>
+      <p class="eyebrow">OBSERVE</p>
+      <h2>What changed?</h2>
+      <p id="observation">Move the slider to begin observing the model.</p>
+    </div>
+  </section>
+</main>
+
+<footer>CIRCULATE • Experiment • Simulation</footer>
+<script src="script.js"></script>
+</body>
+</html>

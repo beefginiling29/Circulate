@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIRCULATE | Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">♥</span> CIRCULATE</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experiment.html">Experiment</a>
+    <a href="science.html">Science</a>
+    <a class="active" href="quiz.html">Quiz</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-heading">
+    <p class="eyebrow">KNOWLEDGE CHECK</p>
+    <h1>Circulation Quiz</h1>
+    <p>Five questions are selected randomly from the offline question bank every time this page loads.</p>
+  </section>
+
+  <section class="quiz-card">
+    <div class="quiz-top"><span id="progress">Question 1 of 5</span><strong id="score">Score: 0</strong></div>
+    <div id="quizArea"></div>
+    <button class="button primary" id="nextButton" disabled>Choose an answer</button>
+    <div id="finalResult" class="final-result hidden"></div>
+  </section>
+</main>
+
+<footer>CIRCULATE • Quiz • Randomized questions</footer>
+<script src="quiz.js"></script>
+</body>
+</html>
